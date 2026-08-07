@@ -1,1 +1,25 @@
-
+{
+  "categoria": "ferias",
+  "perguntas_frequentes": [
+    {
+      "pergunta": "Quantos dias de férias tenho direito por ano?",
+      "resposta": "Todo colaborador tem direito a 30 dias corridos de férias após completar 12 meses de trabalho (período aquisitivo)."
+    },
+    {
+      "pergunta": "Posso vender parte das minhas férias?",
+      "resposta": "Sim. É possível vender até 10 dias de férias (1/3 do período), conhecido como 'abono pecuniário'. A solicitação deve ser feita ao RH com pelo menos 30 dias de antecedência."
+    },
+    {
+      "pergunta": "Posso dividir minhas férias em mais de um período?",
+      "resposta": "Sim. As férias podem ser divididas em até 3 períodos, sendo que um deles deve ter no mínimo 14 dias corridos e os demais não podem ser inferiores a 5 dias cada."
+    },
+    {
+      "pergunta": "Como faço para solicitar férias?",
+      "resposta": "A solicitação deve ser feita através do sistema interno de RH, com no mínimo 30 dias de antecedência da data desejada, sujeita à aprovação do gestor direto."
+    },
+    {
+      "pergunta": "As férias podem ser canceladas pela empresa?",
+      "resposta": "Não tenho informações suficientes sobre esse cenário específico. Recomendo entrar em contato diretamente com o setor de RH."
+    }
+  ]
+}
