@@ -1,5 +1,9 @@
 # Pitch (3 minutos)
 
+vou usar capcut pra editar, claro, script feito, só dividir a tela pra falar e mostrar a palicação e já foiii
+
+
+
 > [!TIP]
 > Você pode usar alguns slides pra apoiar no seu Pitch e mostrar sua solução na prática.
 
