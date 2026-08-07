@@ -1,25 +1,25 @@
 {
-  "categoria": "banco_de_horas",
+  "categoria": "beneficios",
   "perguntas_frequentes": [
     {
-      "pergunta": "Como funciona o banco de horas?",
-      "resposta": "O banco de horas permite compensar horas extras trabalhadas com folgas futuras, ao invés de receber pagamento adicional. As horas ficam registradas em um saldo individual."
+      "pergunta": "Quais benefícios a empresa oferece?",
+      "resposta": "A empresa oferece vale-refeição, vale-transporte, plano de saúde, plano odontológico e seguro de vida em grupo."
     },
     {
-      "pergunta": "Qual o prazo máximo para usar as horas acumuladas?",
-      "resposta": "As horas acumuladas no banco de horas devem ser compensadas em até 6 meses a partir da data em que foram registradas."
+      "pergunta": "Como faço para incluir dependentes no plano de saúde?",
+      "resposta": "A inclusão de dependentes deve ser solicitada ao RH através do formulário de inclusão, junto com os documentos do dependente (certidão de nascimento ou casamento, CPF e RG)."
     },
     {
-      "pergunta": "Como faço para consultar meu saldo de banco de horas?",
-      "resposta": "O saldo pode ser consultado a qualquer momento pelo sistema interno de RH, na seção 'Meu Ponto' ou similar."
+      "pergunta": "Posso trocar o vale-refeição por vale-alimentação?",
+      "resposta": "Sim. A troca pode ser solicitada uma vez por ano, durante o período de portabilidade definido pelo RH, geralmente em janeiro."
     },
     {
-      "pergunta": "Posso converter horas do banco de horas em dinheiro?",
-      "resposta": "Não. As horas do banco de horas só podem ser compensadas com folga, não há conversão em pagamento, exceto em caso de desligamento, quando o saldo é pago na rescisão."
+      "pergunta": "Quando os benefícios começam a valer para um novo colaborador?",
+      "resposta": "Os benefícios começam a valer a partir do primeiro dia útil de trabalho, com exceção do plano de saúde, que tem carência de 30 dias."
     },
     {
-      "pergunta": "Como solicito uma folga usando o banco de horas?",
-      "resposta": "A solicitação deve ser feita pelo sistema interno, com aprovação do gestor direto, com pelo menos 5 dias úteis de antecedência."
+      "pergunta": "O que acontece com meus benefícios se eu ficar de licença médica?",
+      "resposta": "Durante a licença médica, os benefícios como plano de saúde e seguro de vida são mantidos. O vale-refeição e vale-transporte são suspensos durante o período de afastamento."
     }
   ]
 }
