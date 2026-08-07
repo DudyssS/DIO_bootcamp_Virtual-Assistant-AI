@@ -1,1 +1,25 @@
-
+{
+  "categoria": "politicas_gerais",
+  "perguntas_frequentes": [
+    {
+      "pergunta": "A empresa permite trabalho em home office?",
+      "resposta": "Sim. A empresa adota o modelo híbrido, com 3 dias presenciais e 2 dias em home office por semana, salvo acordo diferente com o gestor direto."
+    },
+    {
+      "pergunta": "Quais são as regras do código de conduta da empresa?",
+      "resposta": "O código de conduta prevê respeito mútuo, proibição de assédio moral e sexual, sigilo de informações confidenciais e conflito de interesses. O documento completo está disponível no portal do colaborador."
+    },
+    {
+      "pergunta": "Como denunciar uma situação de assédio ou conduta inadequada?",
+      "resposta": "Denúncias podem ser feitas através do canal de ética da empresa, de forma anônima, disponível no portal do colaborador ou pelo e-mail do compliance."
+    },
+    {
+      "pergunta": "Existe política de horário flexível?",
+      "resposta": "Sim. A empresa permite flexibilidade de até 1 hora na entrada e na saída, desde que respeitada a carga horária diária de 8 horas."
+    },
+    {
+      "pergunta": "Quais equipamentos a empresa fornece para o home office?",
+      "resposta": "Não tenho informações suficientes sobre esse cenário específico. Recomendo entrar em contato diretamente com o setor de RH ou TI."
+    }
+  ]
+}
