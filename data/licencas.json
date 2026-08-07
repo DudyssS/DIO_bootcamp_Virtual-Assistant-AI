@@ -1,1 +1,25 @@
-
+{
+  "categoria": "licencas",
+  "perguntas_frequentes": [
+    {
+      "pergunta": "Como solicito uma licença médica?",
+      "resposta": "A licença médica deve ser comunicada ao gestor e ao RH em até 24 horas, com envio do atestado médico digitalizado pelo sistema interno ou por e-mail."
+    },
+    {
+      "pergunta": "Quantos dias de licença maternidade tenho direito?",
+      "resposta": "A licença maternidade é de 120 dias corridos, podendo ser estendida para 180 dias caso a empresa participe do programa Empresa Cidadã."
+    },
+    {
+      "pergunta": "Quantos dias de licença paternidade tenho direito?",
+      "resposta": "A licença paternidade é de 5 dias corridos, podendo ser estendida para 20 dias caso a empresa participe do programa Empresa Cidadã."
+    },
+    {
+      "pergunta": "Existe licença para acompanhar consulta médica de familiar?",
+      "resposta": "Não tenho informações suficientes sobre esse cenário específico. Recomendo entrar em contato diretamente com o setor de RH."
+    },
+    {
+      "pergunta": "Preciso avisar com quanto tempo de antecedência sobre uma licença programada (ex: cirurgia)?",
+      "resposta": "Licenças programadas devem ser comunicadas ao RH com no mínimo 15 dias de antecedência, sempre que possível, junto com a documentação médica correspondente."
+    }
+  ]
+}
