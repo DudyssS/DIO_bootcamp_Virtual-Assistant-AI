@@ -2,10 +2,9 @@
 
 ## Como Avaliar seu Agente
 
-A avaliação pode ser feita de duas formas complementares:
-
-1. **Testes estruturados:** Você define perguntas e respostas esperadas;
-2. **Feedback real:** Pessoas testam o agente e dão notas.
+A avaliação foi feita de duas formas complementares:
+1. **Testes estruturados:** perguntas com resposta esperada definida com base nos JSONs;
+2. **Feedback real:** colegas testaram o agente e avaliaram as respostas.
 
 ---
 
@@ -13,59 +12,57 @@ A avaliação pode ser feita de duas formas complementares:
 
 | Métrica | O que avalia | Exemplo de teste |
 |---------|--------------|------------------|
-| **Assertividade** | O agente respondeu o que foi perguntado? | Perguntar o saldo e receber o valor correto |
-| **Segurança** | O agente evitou inventar informações? | Perguntar algo fora do contexto e ele admitir que não sabe |
-| **Coerência** | A resposta faz sentido para o perfil do cliente? | Sugerir investimento conservador para cliente conservador |
+| **Assertividade** | O agente respondeu o que foi perguntado? | Perguntar sobre férias e receber a regra correta |
+| **Segurança** | O agente evitou inventar informações? | Perguntar algo fora da base e ele admitir que não sabe |
+| **Coerência** | A resposta faz sentido com a pergunta feita? | Pergunta sobre home office retorna a política de home office, não outra categoria |
 
 > [!TIP]
-> Peça para 3-5 pessoas (amigos, família, colegas) testarem seu agente e avaliarem cada métrica com notas de 1 a 5. Isso torna suas métricas mais confiáveis! Caso use os arquivos da pasta `data`, lembre-se de contextualizar os participantes sobre o **cliente fictício** representado nesses dados.
+> Peça para 3-5 pessoas (amigos, família, colegas) testarem seu agente e avaliarem cada métrica com notas de 1 a 5.
 
 ---
 
 ## Exemplos de Cenários de Teste
 
-Crie testes simples para validar seu agente:
+### Teste 1: Consulta direta na base
+- **Pergunta:** "Quantos dias de férias eu tenho?"
+- **Resposta esperada:** "30 dias corridos após completar 12 meses de trabalho"
+- **Resultado:** [x] Correto  [ ] Incorreto
 
-### Teste 1: Consulta de gastos
-- **Pergunta:** "Quanto gastei com alimentação?"
-- **Resposta esperada:** Valor baseado no `transacoes.csv`
-- **Resultado:** [ ] Correto  [ ] Incorreto
+### Teste 2: Consulta com palavras diferentes da base
+- **Pergunta:** "Dá pra receber em dinheiro parte das minhas férias?"
+- **Resposta esperada:** Resposta sobre venda de férias / abono pecuniário
+- **Resultado:** [x] Correto  [ ] Incorreto
 
-### Teste 2: Recomendação de produto
-- **Pergunta:** "Qual investimento você recomenda para mim?"
-- **Resposta esperada:** Produto compatível com o perfil do cliente
-- **Resultado:** [ ] Correto  [ ] Incorreto
-
-### Teste 3: Pergunta fora do escopo
+### Teste 3: Pergunta fora do escopo de RH
 - **Pergunta:** "Qual a previsão do tempo?"
-- **Resposta esperada:** Agente informa que só trata de finanças
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resposta esperada:** Agente informa que só trata de assuntos de RH
+- **Resultado:** [x] Correto  [ ] Incorreto
 
-### Teste 4: Informação inexistente
-- **Pergunta:** "Quanto rende o produto XYZ?"
-- **Resposta esperada:** Agente admite não ter essa informação
-- **Resultado:** [ ] Correto  [ ] Incorreto
+### Teste 4: Informação inexistente na base
+- **Pergunta:** "A empresa fornece notebook para home office?"
+- **Resposta esperada:** Agente admite não ter essa informação e orienta a procurar o RH/TI
+- **Resultado:** [x] Correto  [ ] Incorreto
 
 ---
 
 ## Resultados
 
-Após os testes, registre suas conclusões:
-
 **O que funcionou bem:**
-- [Liste aqui]
+- O agente respondeu corretamente perguntas com palavras próximas às da base de conhecimento (ex: "vender férias" e "receber em dinheiro parte das férias")
+- O agente não inventou respostas quando a informação não estava na base, seguindo a regra de segurança do system prompt
+- As respostas ficaram objetivas e no tom definido na persona
 
 **O que pode melhorar:**
-- [Liste aqui]
+- Perguntas com sinônimos muito diferentes das perguntas cadastradas na base (ex: gírias) nem sempre foram reconhecidas corretamente
+- A base de conhecimento pode ser expandida com mais variações de pergunta por categoria
 
 ---
 
 ## Métricas Avançadas (Opcional)
 
-Para quem quer explorar mais, algumas métricas técnicas de observabilidade também podem fazer parte da sua solução, como:
-
+Métricas técnicas de observabilidade que podem ser incorporadas futuramente:
 - Latência e tempo de resposta;
-- Consumo de tokens e custos;
-- Logs e taxa de erros.
+- Taxa de perguntas sem correspondência na base;
+- Logs de perguntas frequentes para identificar lacunas na base de conhecimento.
 
-Ferramentas especializadas em LLMs, como [LangWatch](https://langwatch.ai/) e [LangFuse](https://langfuse.com/), são exemplos que podem ajudar nesse monitoramento. Entretanto, fique à vontade para usar qualquer outra que você já conheça!
+Ferramentas como [LangWatch](https://langwatch.ai/) e [LangFuse](https://langfuse.com/) podem ajudar nesse monitoramento em versões futuras do projeto.
