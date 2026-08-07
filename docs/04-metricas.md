@@ -33,12 +33,7 @@ A avaliação foi feita de duas formas complementares:
 - **Resposta esperada:** Resposta sobre venda de férias / abono pecuniário
 - **Resultado:** [x] Correto  [ ] Incorreto
 
-### Teste 3: Pergunta fora do escopo de RH
-- **Pergunta:** "Qual a previsão do tempo?"
-- **Resposta esperada:** Agente informa que só trata de assuntos de RH
-- **Resultado:** [x] Correto  [ ] Incorreto
-
-### Teste 4: Informação inexistente na base
+### Teste 3: Informação inexistente na base
 - **Pergunta:** "A empresa fornece notebook para home office?"
 - **Resposta esperada:** Agente admite não ter essa informação e orienta a procurar o RH/TI
 - **Resultado:** [x] Correto  [ ] Incorreto
