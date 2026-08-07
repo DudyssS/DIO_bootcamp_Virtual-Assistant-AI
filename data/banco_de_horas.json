@@ -1,1 +1,25 @@
-
+{
+  "categoria": "banco_de_horas",
+  "perguntas_frequentes": [
+    {
+      "pergunta": "Como funciona o banco de horas?",
+      "resposta": "O banco de horas permite compensar horas extras trabalhadas com folgas futuras, ao invés de receber pagamento adicional. As horas ficam registradas em um saldo individual."
+    },
+    {
+      "pergunta": "Qual o prazo máximo para usar as horas acumuladas?",
+      "resposta": "As horas acumuladas no banco de horas devem ser compensadas em até 6 meses a partir da data em que foram registradas."
+    },
+    {
+      "pergunta": "Como faço para consultar meu saldo de banco de horas?",
+      "resposta": "O saldo pode ser consultado a qualquer momento pelo sistema interno de RH, na seção 'Meu Ponto' ou similar."
+    },
+    {
+      "pergunta": "Posso converter horas do banco de horas em dinheiro?",
+      "resposta": "Não. As horas do banco de horas só podem ser compensadas com folga, não há conversão em pagamento, exceto em caso de desligamento, quando o saldo é pago na rescisão."
+    },
+    {
+      "pergunta": "Como solicito uma folga usando o banco de horas?",
+      "resposta": "A solicitação deve ser feita pelo sistema interno, com aprovação do gestor direto, com pelo menos 5 dias úteis de antecedência."
+    }
+  ]
+}
