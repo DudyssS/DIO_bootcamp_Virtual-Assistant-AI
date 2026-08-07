@@ -3,79 +3,65 @@
 ## Caso de Uso
 
 ### Problema
-> Qual problema financeiro seu agente resolve?
-
-[Sua descrição aqui]
+> Em empresas de todos os portes, grande parte das solicitações enviadas ao setor de Recursos Humanos corresponde a dúvidas recorrentes (férias, banco de horas, benefícios, licenças, políticas internas). Responder continuamente essas perguntas consome tempo da equipe de RH e atrasa atividades mais estratégicas.
 
 ### Solução
-> Como o agente resolve esse problema de forma proativa?
-
-[Sua descrição aqui]
+> O HR Assistant AI consulta uma base de conhecimento estruturada com perguntas e respostas de RH e responde ao colaborador de forma objetiva e padronizada. Quando a pergunta está fora do escopo da base, o agente informa que não possui informação suficiente e orienta o colaborador a procurar o RH diretamente, ao invés de arriscar uma resposta incorreta.
 
 ### Público-Alvo
-> Quem vai usar esse agente?
-
-[Sua descrição aqui]
+> Colaboradores da empresa que têm dúvidas do dia a dia sobre férias, banco de horas, benefícios, licenças e políticas internas, além de gestores que queiram consultar essas mesmas informações rapidamente.
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+RH.IA
 
 ### Personalidade
-> Como o agente se comporta? (ex: consultivo, direto, educativo)
-
-[Sua descrição aqui]
+> Objetivo e prestativo — vai direto ao ponto, sem enrolar, mas sempre educado. Não tenta parecer "engraçadinho"; é claro e confiável, como se fosse um colega experiente do RH.
 
 ### Tom de Comunicação
-> Formal, informal, técnico, acessível?
-
-[Sua descrição aqui]
+> Acessível e profissional. Nada de jargão jurídico/trabalhista complicado — explica de um jeito que qualquer colaborador entende, mesmo quem nunca leu a CLT.
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- Saudação: "Olá! Sou o RH.IA. Em que posso te ajudar hoje — férias, banco de horas, benefícios, licenças ou políticas internas?"
+- Confirmação: "Entendi sua dúvida! Deixa eu consultar isso pra você."
+- Erro/Limitação: "Não tenho essa informação na minha base de conhecimento no momento. Recomendo falar diretamente com o time de RH pra garantir uma resposta certa."
 
 ---
 
 ## Arquitetura
 
 ### Diagrama
-
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
-    B --> C[LLM]
-    C --> D[Base de Conhecimento]
+    A[Colaborador] -->|Pergunta| B[Interface - Streamlit]
+    B --> C[Motor de Busca]
+    C --> D[Base de Conhecimento - JSONs]
     D --> C
-    C --> E[Validação]
-    E --> F[Resposta]
+    C --> E[Validação: resposta está na base?]
+    E -->|Sim| F[Resposta objetiva]
+    E -->|Não| G["Resposta padrão: 'não tenho essa informação'"]
 ```
 
 ### Componentes
-
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | Chatbot em Streamlit |
+| Motor de Busca | Script Python que localiza a pergunta mais próxima nos arquivos JSON |
+| Base de Conhecimento | 5 arquivos JSON (férias, banco de horas, benefícios, licenças, políticas gerais) |
+| Validação | Checagem se a pergunta bate com algo na base antes de responder |
 
 ---
 
 ## Segurança e Anti-Alucinação
 
 ### Estratégias Adotadas
-
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [x] O agente só responde com base nos dados da base de conhecimento
+- [x] Quando não sabe, admite e orienta o colaborador a procurar o RH
+- [x] Não responde perguntas fora do escopo de RH (ex: assuntos técnicos de outras áreas)
+- [ ] Respostas incluem a categoria/fonte da informação
 
 ### Limitações Declaradas
-> O que o agente NÃO faz?
-
-[Liste aqui as limitações explícitas do agente]
+> O agente não substitui o atendimento humano do RH em casos sensíveis (demissões, litígios, situações pessoais delicadas). Ele não acessa dados individuais reais de colaboradores (saldo real de férias, holerite, etc.) — trabalha apenas com informações gerais de política da empresa. Não deve ser usado para decisões jurídicas ou trabalhistas formais.
