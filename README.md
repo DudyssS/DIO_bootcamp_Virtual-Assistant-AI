@@ -67,13 +67,11 @@ Define **o que** o agente faz e **como** ele funciona:
 - **Arquitetura:** fluxo de dados e integração com a base de conhecimento
 - **Segurança:** como evitar alucinações e garantir respostas confiáveis
 
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
 
 ---
 
 ### 2. Base de Conhecimento
 
-Dados mockados disponíveis na pasta [`data/`](./data/):
 
 | Arquivo                   | Formato | Descrição                                    |
 | -------------------------- | ------- | --------------------------------------------- |
@@ -83,7 +81,6 @@ Dados mockados disponíveis na pasta [`data/`](./data/):
 | `licencas.json`             | JSON    | Perguntas e respostas sobre licenças           |
 | `politicas_gerais.json`     | JSON    | Código de conduta, home office e outras políticas |
 
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
 
 ---
 
@@ -95,8 +92,6 @@ Documenta os prompts que definem o comportamento do agente:
 - **Exemplos de Interação:** cenários de uso com entrada e saída esperada
 - **Tratamento de Edge Cases:** como o agente lida com situações-limite
 
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
-
 ---
 
 ### 4. Aplicação Funcional
@@ -106,8 +101,6 @@ Protótipo funcional do assistente:
 - Chatbot interativo (Streamlit)
 - Busca na base de conhecimento
 - Interface simples de conversação
-
-📁 **Pasta:** [`src/`](./src/)
 
 ---
 
@@ -120,22 +113,6 @@ Como a qualidade do agente foi avaliada:
 - Precisão/assertividade das respostas
 - Taxa de respostas seguras (sem alucinações)
 - Coerência com a pergunta do colaborador
-
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
-
----
-
-### 6. Pitch
-
-Pitch de 3 minutos (estilo elevador) apresentando:
-
-- Qual problema o agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é útil para a empresa?
-
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
-
----
 
 ## Ferramentas Utilizadas
 
